@@ -23,6 +23,25 @@ Output: "f"
 
 
 
+
+//keypoints:
+line:6 the letters wrap around;
+eg:
+Input: letters = ["c","f","j"], target = "j"
+..there is no element greater than "j",so we need to return "c".i.e the first element.
+
+
+
+
 so this is basically the ceil of a letter(like ceil of a number in sorted array)
 code:
 https://github.com/VaspulaVijayaLakshmi/BinarySearch/blob/main/ceil%20in%20sorted%20array
+
+
+
+
+
+
+
+
+
