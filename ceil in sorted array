@@ -1,0 +1,49 @@
+Link : https://www.geeksforgeeks.org/ceiling-in-a-sorted-array/
+
+Given a sorted array and a value x, the ceiling of x is the smallest element in array greater than or equal to x, 
+and the floor is the greatest element smaller than or equal to x. Assume than the array is sorted in non-decreasing order. 
+Write efficient functions to find floor and ceiling of x. 
+
+Examples : 
+ 
+
+For example, let the input array be {1, 2, 8, 10, 10, 12, 19}
+For x = 0:    floor doesn't exist in array,  ceil  = 1
+For x = 1:    floor  = 1,  ceil  = 1
+For x = 5:    floor  = 2,  ceil  = 8
+For x = 20:   floor  = 19,  ceil doesn't exist in array
+
+
+//bruteforce :linear search o(n)
+//optimized: Binary search O(logn)
+
+#include<bits stdc++.h>
+using namespace std;
+
+int ceil(int arr[],int n,int k)
+{
+int strt=0,end=n-1,ans=-1;
+
+while(strt<=end)
+{
+
+int mid=strt+(end-strt)/2;
+
+//if the element present at mid is greater than k,then it could be the POTENTIAL ceiling of k,but we need to find the smallest number that is greater than k
+//so we need to store this as our potential ans and still continue the search.
+if(arr[mid]>=k){
+ans=mid;
+h=mid-1;
+}
+
+//if the element at mid is less than k,then we need to search in right half
+
+else
+strt=mid+1;
+
+}
+
+//in the end return the ans
+return ans;
+}
+
