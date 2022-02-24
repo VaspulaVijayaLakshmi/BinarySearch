@@ -1,0 +1,54 @@
+Given a sorted array and a value x, the floor of x is the largest element in array smaller than or equal to x. Write efficient functions to find floor of x.
+Examples: 
+ 
+
+Input : arr[] = {1, 2, 8, 10, 10, 12, 19}, x = 5
+Output : 2
+2 is the largest element in 
+arr[] smaller than 5.
+
+Input : arr[] = {1, 2, 8, 10, 10, 12, 19}, x = 20
+Output : 19
+19 is the largest element in
+arr[] smaller than 20.
+
+Input : arr[] = {1, 2, 8, 10, 10, 12, 19}, x = 0
+Output : -1
+Since floor doesn't exist,
+output is -1.
+ 
+
+
+//bruteforce :linear search o(n)
+//optimized: Binary search O(logn)
+
+#include<bits stdc++.h>
+using namespace std;
+
+int floor(int arr[],int n,int k)
+{
+int strt=0,end=n-1,ans=-1;
+
+while(strt<=end)
+{
+
+int mid=strt+(end-strt)/2;
+
+//if the element present at mid is smaller than k,then it could be the POTENTIAL floor of k,but we need to find the greatest number that is smaller than k
+//so we need to store this as our potential ans and still continue the search.
+if(arr[mid]<=k){
+ans=mid;
+h=mid-1;
+}
+
+//if the element at mid is greater than k,then we need to search in right half
+
+else
+strt=mid+1;
+
+}
+
+//in the end return the ans
+return ans;
+}
+
