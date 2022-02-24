@@ -38,13 +38,13 @@ int mid=strt+(end-strt)/2;
 //so we need to store this as our potential ans and still continue the search.
 if(arr[mid]<=k){
 ans=mid;
-end=mid-1;
+strt=mid+1;
 }
 
 //if the element at mid is greater than k,then we need to search in right half
 
 else
-strt=mid+1;
+end=mid-1;
 
 }
 
