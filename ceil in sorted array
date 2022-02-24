@@ -1,4 +1,4 @@
-Link : https://www.geeksforgeeks.org/ceiling-in-a-sorted-array/
+cLink : https://www.geeksforgeeks.org/ceiling-in-a-sorted-array/
 
 Given a sorted array and a value x, the ceiling of x is the smallest element in array greater than or equal to x, 
 and the floor is the greatest element smaller than or equal to x. Assume than the array is sorted in non-decreasing order. 
@@ -33,7 +33,7 @@ int mid=strt+(end-strt)/2;
 //so we need to store this as our potential ans and still continue the search.
 if(arr[mid]>=k){
 ans=mid;
-h=mid-1;
+end=mid-1;
 }
 
 //if the element at mid is less than k,then we need to search in right half
