@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+    
+        int n=nums.size();
+       int strt=0,end=n-1;
+       int mid;
+        
+        
+        while(strt<=end){
+            
+            mid=strt+(end-strt)/2;
+            if(nums[mid]==target) return mid;
+            
+            if(nums[mid]>target) end=mid-1;
+            
+            else strt=mid+1;
+            
+        }
+        return -1;
+    }
+};
