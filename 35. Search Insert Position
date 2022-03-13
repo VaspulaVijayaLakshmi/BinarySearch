@@ -1,0 +1,65 @@
+Given a sorted array of distinct integers and a target value, return 
+the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You must write an algorithm with O(log n) runtime complexity.
+
+ 
+
+Example 1:
+
+Input: nums = [1,3,5,6], target = 5
+Output: 2
+Example 2:
+
+Input: nums = [1,3,5,6], target = 2
+Output: 1
+Example 3:
+
+Input: nums = [1,3,5,6], target = 7
+Output: 4
+
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        
+        int n=nums.size();
+        int strt=0,end=n-1;
+        int ans=-1;
+        
+        
+        //checking if the target is less then all elements 
+        if(nums[0]>target) return 0;
+        
+        
+        //if the target is greater then all the elements 
+        if(nums[n-1]<target) return n;
+        
+        
+        //Binary Search
+        while(strt<=end){
+        
+            int mid=strt+(end-strt)/2;
+            
+            if(nums[mid]==target) return    mid;
+            
+            if(nums[mid] < target) strt=mid+1;
+            
+            //we need to find the smallest elemnt that is greater then target
+            //so if an element is >than target ,that could be the potential ans,but we need
+            //the smallest elleemnt >then target,so we store res ,and continue it. 
+            
+                
+            else if(nums[mid]>target){
+                
+                ans=mid;
+                end=mid-1;
+                
+            }
+            
+        }
+        
+        return ans;
+        
+    }
+};
