@@ -1,0 +1,122 @@
+class Solution {
+public:
+    
+    bool isPossible(vector<int>& weights, int days, int capacity){
+        
+        int days_needed=1;
+        int sum=0;
+        
+        for(int i=0;i<weights.size();i++){
+            
+            sum+=weights[i];
+            
+            //if sum>weight then we cant add this to the current day
+            //we need to add this to new day,and strt new day
+            if(sum>capacity){
+             
+                sum=weights[i];
+                days_needed++;
+                
+                
+                if(days_needed>days)
+                    return false;
+            }
+        
+        }
+        
+    
+        return true;
+    }
+    
+    
+    
+    
+    
+    
+    int shipWithinDays(vector<int>& weights, int days) {
+        
+        
+        int sum=0;
+        int max_ele=INT_MIN;
+        
+        for(int i=0;i<weights.size();i++){
+            
+            sum+=weights[i];
+            max_ele=max(max_ele,weights[i]);
+        }
+        
+        
+        if(days==1)
+            return sum;
+
+        
+        int low=max_ele;
+        int high=sum;
+        int res=-1;
+        
+        while(low<=high){
+            
+            //this mid would be capacity
+            int mid=low+(high-low)/2;
+            
+            if(isPossible(weights,days,mid)){
+                
+                res=mid;
+                high=mid-1;
+            }
+            
+            else
+                low=mid+1;
+            
+        }
+        
+        return res;
+    }
+};
+
+
+// Quoted from https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems
+
+
+// As for the question "When can we use the binary search?", my answer is that, If we can discover some kind of monotonicity, for example, if condition(k) is True then condition(k + 1) is True, then we can consider binary search.
+
+//  We dig out the monotonicity of this problem: if we can successfully ship all packages within D days with capacity m, then we can definitely ship them all with any capacity larger than m. 
+     
+//      Now we can design a condition function, let's call it feasible, given an input capacity, it returns whether it's possible to ship all packages within D days.
+     
+     
+//      This can run in a greedy way: if there's still room for the current package, we put this package onto the conveyor belt, otherwise, we wait for the next day to place this package. If the total days needed exceeds D, we return False, otherwise, we return True.
+
+// Next, we need to initialize our boundary correctly. Obviously capacity should be at least max(weights), otherwise, the conveyor belt couldn't ship the heaviest package. On the other hand, capacity need not be more thansum(weights), because then we can ship all packages in just one day.
+    
+
+
+
+// Intution:
+// -> Binary search can be applied not only on sorted array but also on monotonic
+// -> If you are able to find the start and end of your search space which is monotonic in nature , you can start thinking of applying binary search on answers(search space) in a problem.
+    
+    
+// -> Here in this problem lets take the example of 2nd testcase:
+
+// Input: weights = [3,2,2,4,1,4], days = 3
+// Output: 6
+
+// -> Find the search space:
+
+// Think of a maximum weight ship can carry - This is the case if it has to carry all packages in a single day. It comes out to be total of all elements=16.
+
+// Think of a minimum weight ship can carry - This is the case if it has to carry single package everyday. So minimum weight comes out to be maximum of all elements=4.
+
+// So in weights = [3,2,2,4,1,4] our search space is from 4 to 16
+
+// If ship has capacity of 16 - Days taken 1
+// capacity of 4 - Days taken 5 -> (2,2) can be taken in a single day as capacity is 4
+
+// We can observe here that if we decrease the capacity of ship from 16 to 4, days taken will increase from 1 to 5.
+
+// Now here in the above case we have to find minimum capacity such that days taken is 3.
+
+// Apply simple binary search with low=4 and high=16 with a check functioin which tells us if it is possible to ship all the packages within given days with capacity=>mid= low+high/2.
+
+// Change low and high accordingly untill days =3 with minimum capacity.
