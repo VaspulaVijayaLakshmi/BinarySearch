@@ -1,0 +1,97 @@
+class Solution{
+public:
+
+int minAbsoluteSumDiff(vector<int>& nums1, vector<int>& nums2) {
+	
+    long total_diff = 0, n = size(nums1);
+    int max_gain=0;
+    
+	// sorted nums1 needed for using binary search
+	vector<int> sorted_nums1 = nums1;
+        sort(sorted_nums1.begin(), sorted_nums1.end()); 
+
+
+// now traverse throught he array, and try replacing each elelent
+
+	for(int i = 0; i < n; i++){
+
+		int current_diff = abs(nums1[i] - nums2[i]);
+        total_diff += current_diff;
+
+        // Try replacing nums1[i] with some better option (from nums1)
+        int closest = findClosest(sorted_nums1, nums2[i]);
+
+        int possible_diff = abs(closest - nums2[i]);
+
+        int gain = current_diff - possible_diff;
+
+        // Only store the best one
+        max_gain = max(max_gain, gain); 
+
+	}
+
+	return (total_diff - max_gain) % 1000000007;
+
+}
+
+
+
+// bs will return the element closest to k in arr.
+int findClosest(vector<int>& arr, int k){               
+	int n = size(arr), l = 0, r = n - 1, m, closest;
+
+	while(l <= r){
+		m = (l + r) / 2;
+		if(arr[m] == k) return arr[m];
+		if(arr[m] > k) r = m - 1;            
+		else l = m + 1;              
+	}
+
+
+	closest = arr[m];
+
+// in binary search questions if they ask abt closest, after u find the cloests index
+// check if tht element idx>0 then check with the left element
+
+// and if elemenet idx <n , check with the right element as well
+
+	if(m - 1 >= 0 && abs(arr[m - 1] - k) < abs(arr[m] - k)) closest = arr[m - 1];
+	if(m + 1 <  n && abs(arr[m + 1] - k) < abs(arr[m] - k)) closest = arr[m + 1];
+	return closest;
+}
+};
+
+
+
+// we cant sort, ordering matters
+
+// we can find the abs diffs first
+
+// which ever index has max diff, tht index we will take in nums1
+// this may not work always
+
+// We may have to check for all the poosibilities, For all indices
+
+
+// Why we check every index
+// Because the largest gain (i.e., the best replacement) could be at a position with small diff — or big one.
+
+// nums1 = [1,7,5], nums2 = [2,3,5]
+// in this eg: max diff 4, for 7-3
+
+
+// so need to minimize the difff
+
+
+// now i can pick any elemnt in nums1, which is closest to 3
+// so this minimizes the  diff.how to pick an element which is closest to 3
+
+// how to find an element clostst to 3 - Binary Search
+
+
+// Finding the best element to swap for any index i involves finding the
+//  value in nums1 that is closest to nums2[i]. 
+//  Generally any time you're trying to "find the value closest to" 
+//  something, binary search may be applicable.
+
+// https://leetcode.com/problems/minimum-absolute-sum-difference/solutions/1141337/short-easy-w-explanation-binary-search-solution/
