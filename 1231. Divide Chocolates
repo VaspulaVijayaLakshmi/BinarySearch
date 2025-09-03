@@ -9,22 +9,46 @@ Find the maximum total sweetness of the piece you can get by cutting the chocola
 
 
 Example 1:
-
 Input: sweetness = [1,2,3,4,5,6,7,8,9], K = 5
 Output: 6
 Explanation: You can divide the chocolate to [1,2,3], [4,5], [6], [7], [8], [9]
 
 
 Example 2:
-
-
 Input: sweetness = [5,6,7,8,9,1,2,3,4], K = 8
 Output: 1
 Explanation: There is only one way to cut the bar into 9 pieces.
+
+
 Example 3:
-
-
 Input: sweetness = [1,2,2,1,2,2,1,2,2], K = 2
 Output: 5
 Explanation: You can divide the chocolate to [1,2,2], [1,2,2], [1,2,2]
+
+_______
+
+Already admitted - maximize total sweetness you get by picking up the mimimum total sweetness bar
+so the max and min sweetness u can get : 
+
+min - 
+max - 
+
+________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
