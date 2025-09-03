@@ -60,15 +60,11 @@ __________________________________
 
 Here, you’re not finding an index, but the optimal answer in a numeric or conceptual range (min/max resources, distance, capacity).
 
-1 Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
-
-2 Dicide Chocolates
-
-3 Find Smallest Divisor given threshold
-
-4 Minimum Absilute Sum DIfference
-
-5 Minimum Number of Days to Make m Bouquets
+1️ Capacity to Ship Packages – https://lnkd.in/gNcxa9nx
+2️ Divide Chocolates – 1231. Divide Chocolate
+3️ Find Smallest Divisor given threshold – 1283. Find the Smallest Divisor Given a Threshold
+4️ Minimum Absolute Sum Difference – 1818. Minimum Absolute Sum Difference
+5️ Minimum Number of Days to Make m Bouquets – 1482. Minimum Number of Days to Make m Bouquets
 
 
 Hard:
