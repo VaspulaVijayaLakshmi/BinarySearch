@@ -6,8 +6,8 @@ Binary Search is not just about finding an element in a sorted array. It’s a t
 
 Binary search has two important aspects.
 
-A sorted array.
-Splitting an array into two halves.
+-> A sorted array. 
+-> Splitting an array into two halves. 
 
 If We do not have the first one here try to think if second point can be used on ny parameter.
 Eg:PEAK ELEMENT
