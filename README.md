@@ -11,11 +11,12 @@ Narrow the range until the answer is found.
 Common pitfalls: overflow (mid = low + (high - low)/2), wrong boundaries, infinite loops.
 
 
-1️Binary Search – https://lnkd.in/gS6HJ9sJ 
-2️ First Bad Version – https://lnkd.in/gYv94xhN 
-3️ Guess Number Higher or Lower – https://lnkd.in/gQxMFRuP 
-4️ Search Insert Position – https://lnkd.in/ghTEhu68 
-5️ Sqrt(x) – https://lnkd.in/grR6Qprg 
+1️ Binary Search – https://lnkd.in/gS6HJ9sJ  
+2️ First Bad Version – https://lnkd.in/gYv94xhN  
+3️ Guess Number Higher or Lower – https://lnkd.in/gQxMFRuP  
+4️ Search Insert Position – https://lnkd.in/ghTEhu68  
+5️ Sqrt(x) – https://lnkd.in/grR6Qprg  
+
 
 
 ______________________________
