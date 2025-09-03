@@ -14,6 +14,10 @@ If We do not have the first one here try to think if second point can be used on
 Eg:PEAK ELEMENT
 
 
+-> Binary Search Pattern for Problems -  which need  maximize the minimum or mimimise the maximum
+________________________
+
+
 
 
 🔹 𝗦𝘁𝗲𝗽 𝟭:  Core
@@ -57,6 +61,10 @@ __________________________________
 Here, you’re not finding an index, but the optimal answer in a numeric or conceptual range (min/max resources, distance, capacity).
 
 1 Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
+2 Dicide Chocolates
+Find Smallest Divisor given threshold
+4 Minimum Absilute Sum DIfference
+5 Minimum Number of Days to Make m Bouquets
 
 
 Hard:
