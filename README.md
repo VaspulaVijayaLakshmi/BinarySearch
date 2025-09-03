@@ -61,9 +61,13 @@ __________________________________
 Here, you’re not finding an index, but the optimal answer in a numeric or conceptual range (min/max resources, distance, capacity).
 
 1 Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
+
 2 Dicide Chocolates
-Find Smallest Divisor given threshold
+
+3 Find Smallest Divisor given threshold
+
 4 Minimum Absilute Sum DIfference
+
 5 Minimum Number of Days to Make m Bouquets
 
 
