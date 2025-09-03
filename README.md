@@ -56,11 +56,14 @@ __________________________________
 
 Here, you’re not finding an index, but the optimal answer in a numeric or conceptual range (min/max resources, distance, capacity).
 
+1 Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
+
+
+Hard
 1️ Median of Two Sorted Arrays – https://lnkd.in/g7dV4DcJ  
 2️ Split Array Largest Sum – https://lnkd.in/gxjnTK7m  
-3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH  
-4️ Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
-5️ K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8 
+3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH    
+4 K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8 
 
 
 
