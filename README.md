@@ -77,12 +77,16 @@ _____________________
 
 Difference between the two problems:
 
-Find Minimum → we don’t care about the exact value, only about the minimum. So we can keep shrinking until l == r.
+-> Find Minimum → we don’t care about the exact value, only about the minimum. So we can keep shrinking until l == r.
 
-Search Target → we need to decide: is the target in the left half or the right half?
+-> Search Target → we need to decide: is the target in the left half or the right half?
 That requires extra comparisons with the target, not just nums[mid] vs nums[end].
 
 
 
-Binaru Search can be applied when we do sorting and then in the search spae we need to check something.
+-> Binaru Search can be applied when we do sorting and then in the search spae we need to check something.
 LIke max/min.
+
+
+-> 1482. Minimum Number of Days to Make m Bouquets -  Attention to detail - consecutive flowers to make boque, lets say we need to collect 5 cons. flowers
+if we collect flowers 4 flowers cons and 5th day bloom=0, then we need to throw these flowers. and strt colectig again
