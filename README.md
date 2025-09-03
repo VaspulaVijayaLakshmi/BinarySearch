@@ -6,7 +6,8 @@ Binary Search is not just about finding an element in a sorted array. It’s a t
 
 Binary search has two important aspects.
 
--> A sorted array. 
+-> A sorted array
+
 -> Splitting an array into two halves. 
 
 If We do not have the first one here try to think if second point can be used on ny parameter.
@@ -60,3 +61,23 @@ Here, you’re not finding an index, but the optimal answer in a numeric or conc
 3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH  
 4️ Capacity to Ship Packages – https://lnkd.in/gNcxa9nx  
 5️ K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8 
+
+
+
+
+
+
+_____________________
+
+
+-> Observation :
+
+ Search in Rotated Sorted Array – https://lnkd.in/gt8nYfs4  
+ Find Minimum in Rotated Sorted Array – https://lnkd.in/gTBiuc6x  
+
+Difference between the two problems:
+
+Find Minimum → we don’t care about the exact value, only about the minimum. So we can keep shrinking until l == r.
+
+Search Target → we need to decide: is the target in the left half or the right half?
+That requires extra comparisons with the target, not just nums[mid] vs nums[end].
