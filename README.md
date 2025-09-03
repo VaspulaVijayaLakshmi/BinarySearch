@@ -3,6 +3,18 @@
 
 Binary Search is not just about finding an element in a sorted array. It’s a technique that applies to arrays, rotated arrays, and even optimization problems. 
 
+
+Binary search has two important aspects.
+
+A sorted array.
+Splitting an array into two halves.
+
+If We do not have the first one here try to think if second point can be used on ny parameter.
+Eg:PEAK ELEMENT
+
+
+
+
 🔹 𝗦𝘁𝗲𝗽 𝟭:  Core
 
 Works only on monotonic conditions (sorted or yes/no search space).
