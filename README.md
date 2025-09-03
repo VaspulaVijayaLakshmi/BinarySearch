@@ -81,3 +81,8 @@ Find Minimum → we don’t care about the exact value, only about the minimum. 
 
 Search Target → we need to decide: is the target in the left half or the right half?
 That requires extra comparisons with the target, not just nums[mid] vs nums[end].
+
+
+
+Binaru Search can be applied when we do sorting and then in the search spae we need to check something.
+LIke max/min.
