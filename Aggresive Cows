@@ -1,3 +1,5 @@
+https://www.geeksforgeeks.org/problems/aggressive-cows/1
+
 You are given:
 
 n stalls positioned at different locations along a line (given as an array of integers).
@@ -83,11 +85,104 @@ they are placed side by side
 
 
 
+______________________________________
+
+
+
+How to decide if we move left or right.
+-> if i can place the cos with lets a distance.
+I will check if i can check if i can place the more distance.
+
+
+
+class Solution {
+  public:
+  
+  
+    bool canPlace(vector<int> &stalls, int k, int minDistance){
+        
+        //so start from the starting, and check 
+        //and place the cow, after the min distance
+        int cowsPlaced=1 , lastPos=stalls[0];
+        
+        for(int i=1;i<stalls.size();i++){
+            
+            
+            if(stalls[i]-lastPos>=minDistance){
+                cowsPlaced+=1;
+                lastPos=stalls[i];
+            }
+            
+            
+        }
+        return cowsPlaced>=k;
+            
+    }
+    
+    
+    
+    int aggressiveCows(vector<int> &stalls, int k) {
+        
+        //sort
+         sort(stalls.begin(),stalls.end());
+         int n=stalls.size();
+         
+         //min distance =1, placing cow side by side
+         //max distance - max distance b/w the start and  stall
+          int l=1,dis=0;
+          int h=stalls[n-1]-stalls[0];
+          
+          while(l<=h){
+              
+              int mid = l+(h-l)/2;
+              
+              //if i can place this with the distance b/w stalls
+              //should i move left or right.
+              //
+              if(canPlace(stalls,k,mid)){
+                  dis = mid;
+                 l=mid+1;
+                  
+              }
+              
+              else h=mid-1;
+              
+          }
+          
+          return dis;
+        
+    }
+};
 
 
 
 
 
+
+
+// The actual greedy idea
+
+// Place the first cow at stalls[0].
+// Keep track of the last position where you placed a cow (lastPos).
+
+// For every next stall:
+// If stalls[i] - lastPos >= minDistance, place another cow at stalls[i].
+// Update lastPos = stalls[i].
+// Keep a counter cowsPlaced.
+
+
+// If cowsPlaced >= k → return true.
+
+// Otherwise → return false.
+
+
+
+We want to maximize the min distance.
+So each time placement with distance mid succeeds, we ask:
+ Can I push the cows even farther apart?
+That’s why we go right.
+
+If it fails, it means we asked for too large a min distance, so we must reduce → go left.
 
 
 
