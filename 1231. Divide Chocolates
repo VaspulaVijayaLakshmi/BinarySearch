@@ -77,6 +77,72 @@ public:
 __________________________
 
 
+
+
+Since ninja is generous he'll take the min sweetness.
+
+so what we need to do is, we need to the slices such tht even if he takes min swetness one
+he will atleast maximise
+
+minimum sweetness
+maximize the total sweetness
+Consecutive cuts
+
+
+
+
+
+-> this is maximize the minimum swetness
+
+9 chcolates , 3 friends
+5 6 7 8 9 10 11 12 13
+
+I have this sweetness array
+
+4 pieces - 3 cuts 
+
+
+
+so cut into 3 pieces
+
+5 6 7 8 9 10 11 12 13
+
+[5, 6, 7], [8, 9], [10, 11], [12, 13] - [18,17,21,25] 
+                                        [so i need take diff]
+                                        so that thats the max sweetness i can get
+
+                                        in this i will need to take 17 - so diff is min
+
+
+
+[5, 6], [7, 8, 9], [10, 11,12], [13] - [11,24,31,13] - min swetness -13
+
+.....
+
+
+like this so many division
+SO i can do recursion + backtracking
+
+but Optimizations I can work on BS + Greedy
+
+
+Min amd max
+
+MIn - min shcolate swettness - we will give the min sweetness one ti the ninja
+Max - max would be - sum of sweetness/k , that means all get the same sweetness
+
+
+
+
+
+
+
+
+
+
+
+_________________________
+
 This is a maximize the minimum problem → Binary Search on answer.
 
 Range of sweetness you can eat:
