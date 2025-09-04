@@ -1,0 +1,97 @@
+You are given:
+
+n stalls positioned at different locations along a line (given as an array of integers).
+k cows that you need to place in these stalls.
+You want to place the cows in such a way that the minimum distance between any two cows is as large as possible.
+
+Input:
+stalls = [1, 2, 4, 8, 9]
+k = 3
+
+Output:
+3
+
+
+
+1,2,4,8,9
+
+i have 3 stalls
+
+
+so i need to place them such that
+
+1         2          4           8         9
+
+
+One stall i can place like this :
+
+I can place at 2-4 -> 2 - 3 - 4
+then the distance will be 
+
+1-2 =1
+2-3=1
+3-4=1
+4-8=4
+8-9=1
+
+
+minimze the maximum means now in the distqnces b/w stalls
+
+nowout of all the maximum distance is 4
+
+
+
+
+
+now I will place one more stall here:
+
+1         2     3      4     6   7    8         9
+
+I can place at  -> 
+then the distance will be 
+
+all distnces are 1
+so mimimizing the max is 1.
+
+
+
+
+so what are all the points i have where i can place the cows stalls
+so i will put the cows in stall and check all possibilities and backtrck and continue.
+Not optimised.
+
+
+
+
+BS+Greedy:
+
+
+
+SORT the stall if not already.
+
+
+
+the range : 
+
+min distance - low will be starting stall
+max - max(stall) - min(stall)
+
+so the max distance would be the starting stall - ending stall
+
+min ? is 1 or? there is only one stall.
+they are placed side by side
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
