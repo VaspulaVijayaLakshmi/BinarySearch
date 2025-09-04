@@ -104,3 +104,11 @@ LIke max/min.
 
 -> 1482. Minimum Number of Days to Make m Bouquets -  Attention to detail - consecutive flowers to make boque, lets say we need to collect 5 cons. flowers
 if we collect flowers 4 flowers cons and 5th day bloom=0, then we need to throw these flowers. and strt colectig again
+
+
+
+
+Key difference from Chocolate Division
+
+Chocolate: canDivide checks if each piece ≥ mid (maximize min).
+Books: canAllocate checks if each piece ≤ mid (minimize max).
