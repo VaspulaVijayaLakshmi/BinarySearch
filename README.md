@@ -75,8 +75,10 @@ Hard:
 2️ Split Array Largest Sum – https://lnkd.in/gxjnTK7m  
 3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH    
 4 K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8 
+5.Painters Partition
+6. Allocate Pages of Book
 
-
+Solve Painters Partition before Allocate Pages of Book
 
 
 
