@@ -73,10 +73,10 @@ Hard:
 
 1️ Median of Two Sorted Arrays – https://lnkd.in/g7dV4DcJ  
 2️ Split Array Largest Sum – https://lnkd.in/gxjnTK7m  
-3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH    
-4 K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8 
-5.Painters Partition
-6. Allocate Pages of Book
+3️ Aggressive Cows (GFG/LC variant) – https://lnkd.in/gqGF9KmH  
+4️ K-th Smallest Pair Distance – https://lnkd.in/g4yAeSq8  
+5️ Painters Partition  
+6️ Allocate Pages of Boo
 
 Solve Painters Partition before Allocate Pages of Book
 
