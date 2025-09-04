@@ -1,0 +1,10 @@
+You’re given:
+
+An array pages[] where each element represents the number of pages in a book.
+m students.
+
+You need to allocate consecutive books to each student (no splitting a book).
+
+Each student must get at least one book.
+
+Objective: Minimize the maximum number of pages assigned to a student.
