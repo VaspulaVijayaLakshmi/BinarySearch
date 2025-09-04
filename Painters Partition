@@ -1,0 +1,86 @@
+https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
+
+class Solution {
+  public:
+  
+
+    bool canPaintThisLength(vector<int>& arr, int k,int maxboardLen){
+         
+         
+         int currBoardLen=0,painter=1;
+         for(int i=0;i<arr.size();i++){
+             
+             if(currBoardLen+arr[i] > maxboardLen){
+                 
+                 painter++;
+                 currBoardLen = arr[i];
+                 
+                 if(painter>k) return false;
+                 
+             }
+             
+             else
+               currBoardLen +=arr[i]  ;
+             
+         }
+         
+         return true;
+    }
+    
+    
+    
+    int minTime(vector<int>& arr, int k) {
+        
+        //so tht kinmum time we can complete 
+        //is the largest size of the board
+        int l=*max_element(arr.begin(),arr.end());
+        
+        //only 1 pinter paints alll baords
+        int h=accumulate(arr.begin(),arr.end(),0);
+        int time=0;
+        
+        while(l<=h){
+            
+            int mid=l+(h-l)/2;
+            
+            //can paint in this time is nothing but 
+            //the max length of board for each painter needs to paint
+            
+            //so it ca be canPaintinThisTime or can PaintthisMuchLength Bord
+            if(canPaintThisLength(arr,k,mid)){
+                
+               // then ill tru reducing the time nd see if i can paint in thht time
+                time=mid;
+                h=mid-1;
+            }
+            
+            else l=mid+1;
+        }
+        
+        return time;
+    
+    }
+};
+
+
+// so each point - minimum times means - 
+
+// each apinter will take the sametime.
+
+// so we can divide this array so tht 
+
+
+
+// Input: arr[] = [5, 10, 30, 20, 15], k = 3
+
+
+// contiguos boards only
+
+// [5] , [10,30] , [20,15] - [5,40,35] - so it takes 40mins
+// [5,10] [30] , [20,15] - [12,30,35] - 35mins
+// [5,10,30] [20] , [15] - [45,20,15] - 45mins
+
+// so we need to minimize the maximum.
+
+// Same like book Allocation problem.
+
