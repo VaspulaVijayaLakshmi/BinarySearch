@@ -1,0 +1,30 @@
+Row with max 1s
+
+
+// [[0,1,1,1], 
+// [0,0,1,1], 
+// [1,1,1,1],
+// [0,0,0,0]]
+
+
+// m*n array
+// Traverse the array rows wise and count -> O(m*n) complexity
+
+
+// Or since array is sorted.
+
+// N columns right
+
+// SO m*logN
+
+
+
+// As the array is alreay sorted. We start the traversal from top right corner and traverse each row as follows :
+
+Traverse the row from n-1 to 0
+
+// If we see a 1 => go left in same row
+// If we see a 0 move down  i.e change the row, without changing the column.
+// Repeat the process till we go out of bounds either in row side or column side.
+// Here the idea works beacuse when we see 1 we try to maximize it by going left . When we hit a 0, we go down by keeping the column constant.
+
