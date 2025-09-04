@@ -114,3 +114,20 @@ Key difference from Chocolate Division
 
 Chocolate: canDivide checks if each piece ≥ mid (maximize min).
 Books: canAllocate checks if each piece ≤ mid (minimize max).
+
+
+
+_____________________________________
+
+******IMP
+Minimize Max Distance to Gas Station
+
+
+
+In integer binary search, we stop when l <= r crosses.
+But in doubles/fractions, the search space never “crosses” perfectly — it keeps shrinking but never hits the exact answer.
+
+So we stop when the search space (h - l) becomes very small (like 1e-6).
+That’s our precision tolerance.
+
+
