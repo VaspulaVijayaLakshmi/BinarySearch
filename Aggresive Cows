@@ -6,6 +6,23 @@ n stalls positioned at different locations along a line (given as an array of in
 k cows that you need to place in these stalls.
 You want to place the cows in such a way that the minimum distance between any two cows is as large as possible.
 
+
+
+
+"minimum largest" terminology, consider this:
+
+If you put cows at 1,2,8. Distance btw stalls is 1, 6 resp. 
+but if you keep at 1,4,8 distance is 3, 4. 
+In the first case, the minimum distance is 1 while in the 2nd case it's 3. 
+
+You can never put cows in a way that gives a minimum that is larger than 3 i.e. distance cannot be 4,5 or 6,7.
+
+
+
+
+
+
+
 Input:
 stalls = [1, 2, 4, 8, 9]
 k = 3
