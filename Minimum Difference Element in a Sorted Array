@@ -1,0 +1,63 @@
+Sorted array - BS
+
+FLoor of  element 
+Ceil of element 
+
+
+Min of abs diff of both with val
+
+
+
+[1,2,3,10,15]
+
+val =12
+
+[12-10] = 2
+[15-12 = 3
+
+
+so 10 is the min diff in sorted array
+
+
+or simple BS
+
+FInd insert pos for 12
+
+
+now, we need to hande edge cases 
+
+If pos =0, then return abs(arr[0]-val)
+
+if pos =n then return abs(arr[n-1]-val)
+
+else return min(abs(arr[x]-val), abs(arr[x-1]-val) 
+
+
+
+search()
+
+int mid=l+h/2;
+
+if(arr[mid] == val) return 0;
+
+else if(arr[mid]<val )
+potential idx = mid;
+l=mid+1;
+
+
+else
+h=mid-1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
