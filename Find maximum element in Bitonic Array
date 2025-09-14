@@ -1,0 +1,57 @@
+arr[] = {-3, 9, 18, 20, 17, 5, 1},
+
+
+20 is bitonic point
+
+
+if i land on 18 then this could be bitonic
+
+but i need to check if my left or right is larger
+
+if my right is larger - im in increasing side - so move right
+
+if my left is larger im in decreasin side so move left
+
+
+at any point if mid is greater than both left and right i found the bitonic pointl
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int findBitonicPoint(vector<int>& arr) {
+    int n = arr.size();
+    int low = 0, high = n - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        // Handle boundaries
+        if (mid > 0 && mid < n - 1) {
+            if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1]) {
+                return arr[mid]; // bitonic point
+            } 
+            else if (arr[mid] > arr[mid - 1] && arr[mid] < arr[mid + 1]) {
+                low = mid + 1; // move right
+            } 
+            else {
+                high = mid - 1; // move left
+            }
+        } 
+        else if (mid == 0) {
+            return arr[0] > arr[1] ? arr[0] : arr[1];
+        } 
+        else if (mid == n - 1) {
+            return arr[n - 1] > arr[n - 2] ? arr[n - 1] : arr[n - 2];
+        }
+    }
+    return -1; // should not happen for valid bitonic array
+}
+
+int main() {
+    vector<int> arr = {-3, 9, 18, 20, 17, 5, 1};
+    cout << "Bitonic Point: " << findBitonicPoint(arr) << endl;
+    return 0;
+}
