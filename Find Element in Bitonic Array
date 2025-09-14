@@ -1,0 +1,7 @@
+
+
+FInd the bitonic point in the array.
+If the lement is greater than bitonic then that element is not present in the array. 
+- since bitnoic point is the lrgest point.
+
+or else do Binary Search is both sides.
