@@ -130,4 +130,11 @@ But in doubles/fractions, the search space never “crosses” perfectly — it 
 So we stop when the search space (h - l) becomes very small (like 1e-6).
 That’s our precision tolerance.
 
+_______________________________________
 
+
+
+Contiguous → Greedy
+Unrestricted → Backtracking
+
+2305. Fair Distribution of Cookies - Backtracking Approach
