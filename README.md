@@ -134,7 +134,9 @@ _______________________________________
 
 
 
-Contiguous → Greedy
-Unrestricted → Backtracking
+1. Contiguous → Greedy
+2. Unrestricted → Backtracking
 
-2305. Fair Distribution of Cookies - Backtracking Approach
+-> 2305. Fair Distribution of Cookies - Backtracking Approach
+
+This doesnt work with BS, as there is no conitguos restraint
