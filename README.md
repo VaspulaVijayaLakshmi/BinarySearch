@@ -140,3 +140,28 @@ _______________________________________
 -> 2305. Fair Distribution of Cookies - Backtracking Approach
 
 This doesnt work with BS, as there is no conitguos restraint
+_________________
+
+
+
+One-line intuition
+
+Ship packages → minimize max → <= cap
+Divide chocolate → maximize min → >= mid
+
+
+-> Divide Cholate:
+
+Can we make at least K+1 pieces each having sweetness ≥ mid ?
+
+We want to check:
+Can we make at least K+1 pieces each having sweetness ≥ mid ?
+
+
+-> Ship Package
+Can we mke the capacity kess and less...
+So we check the condiition capcit< mid
+
+
+
+
