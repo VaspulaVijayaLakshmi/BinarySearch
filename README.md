@@ -163,6 +163,12 @@ Can we make at least K+1 pieces each having sweetness ≥ mid ?
 Can we mke the capacity kess and less...
 So we check the condiition capcit< mid
 
+______
 
+```
+Minimize max → “avoid overflow” → split when >
+
+Maximize min → “ensure minimum” → cut when >=
+```
 
 
