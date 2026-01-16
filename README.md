@@ -172,3 +172,12 @@ Maximize min → “ensure minimum” → cut when >=
 ```
 
 
+| Problem           | mid means        | Check         |
+| ----------------- | ---------------- | ------------- |
+| Book Allocation   | max pages        | students ≤ k  |
+| Painter Partition | max time         | painters ≤ k  |
+| Ship Packages     | ship capacity    | days ≤ D      |
+| Split Array       | max subarray sum | subarrays ≤ k |
+
+
+students / painters / days <= k 
