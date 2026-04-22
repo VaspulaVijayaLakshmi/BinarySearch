@@ -181,3 +181,8 @@ Maximize min → “ensure minimum” → cut when >=
 
 
 students / painters / days <= k 
+
+__________________________________________
+
+
+https://leetcode.com/discuss/post/1234074/0-1-bfs-by-prathmesh-bendal-47x0/
